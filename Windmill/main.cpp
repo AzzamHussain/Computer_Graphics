@@ -1,7 +1,7 @@
 #include <iostream>
 #include <gl/glut.h>
 #include <windows.h>
-// #include <mmsystem.h>  // For playing sound - Commented out
+// #include <mmsystem.h>  // For playing sound 
 using namespace std;
 #define PI 3.141592
 
@@ -104,7 +104,7 @@ void Timer(int value) // work in this function after completing windmill to anim
                 // Check if the plane has crashed
                 if (!crashed && planeY <= 50) {
                     crashed = true;  // Mark the plane as crashed
-                    // PlaySound(TEXT("shoot.wav"), NULL, SND_ASYNC | SND_FILENAME); // Commented out crash sound
+                    // PlaySound(TEXT("shoot.wav"), NULL, SND_ASYNC | SND_FILENAME); //  crash sound
                 }
             }
         }
@@ -148,7 +148,7 @@ int main(int argc, char** argv)
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
     glutInitWindowPosition(50, 50);
     glutInitWindowSize(500, 500);
-    glutCreateWindow("BSCS 514 Lab #8");
+    glutCreateWindow("Beautiful Scenery");
     init();
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
@@ -206,7 +206,7 @@ void drawlandscape()
 
     glEnd();
 
-    /* Draw the body of a windmill */
+    /* body of a windmill */
     glBegin(GL_QUADS);
     glColor3f(0.6, 0.6, 0.0);
     glVertex2f(145.0, 50.0);
